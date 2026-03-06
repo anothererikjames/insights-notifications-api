@@ -1,0 +1,16 @@
+{
+  "workspace": {
+    "id": "dbda4b54-7655-43c7-93c1-ff3337cf7f74"
+  },
+  "entities": {
+    "collections": [
+      "../postman/collections/default-notifications-api_52274286-1875de52-b5bb-43a9-92c1-48cd33245520.postman_collection.json"
+    ],
+    "environments": [
+      "../postman/environments/demo-insights_52274286-f1a1d3e3-5b25-428d-a5e6-d0292d4afc64.postman_environment.json"
+    ],
+    "specs": [],
+    "flows": [],
+    "globals": []
+  }
+}
