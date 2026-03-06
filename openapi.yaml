@@ -3,9 +3,7 @@ info:
   title: Notifications API
   description: Multi-channel notification delivery service
   version: "1.0.0"
-  contact:
-    name: Notifications Team
-    email: notifications@example.com
+  # Missing contact info (governance violation)
 
 servers:
   - url: https://notifications.api.example.com/v1
@@ -68,12 +66,7 @@ paths:
         "404":
           description: User not found
 
-components:
-  securitySchemes:
-    BearerAuth:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
+
 
   schemas:
     EmailMessage:
