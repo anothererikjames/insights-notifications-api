@@ -1,0 +1,24 @@
+name: Postman Collection Run
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  postman:
+    runs-on: ubuntu-latest
+    name: Run Notifications Tests
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Postman CLI
+        run: curl -o- "https://dl-cli.pstmn.io/install.sh" | sh
+
+      - name: Login to Postman CLI
+        run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
+
+      - name: Run Postman Collection
+        run: |
+          postman collection run "52238111-8404586c-4aa9-4f1a-9708-983b6319fb98" \
+            --environment "52983738-8d7e1e9c-ae6e-4cc1-acc2-b33241a0132b" \
+            --verbose
